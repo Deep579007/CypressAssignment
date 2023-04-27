@@ -28,7 +28,8 @@ describe('View Personal Details Test', () => {
       cy.url().should('include', '/dashboard');
 
       // Navigate to the MyInfo page
-      cy.get(':nth-child(5) > .oxd-main-menu-item > .oxd-text').click()
+      //cy.get(':nth-child(5) > .oxd-main-menu-item > .oxd-text').click()
+      cy.get('.oxd-sidepanel-body').contains('My Info').click();
   
       // Verify that the user is directed to the MyInfo page
       cy.url().should('include', '/viewPersonalDetails')
@@ -64,7 +65,7 @@ describe('Edit Personal Details Test', () => {
       cy.url().should('include', '/dashboard');
 
       // Navigate to the MyInfo page
-      cy.get(':nth-child(5) > .oxd-main-menu-item > .oxd-text').click()
+      cy.get('.oxd-sidepanel-body').contains('My Info').click();
   
       // Change the personal details
       cy.get(':nth-child(1) > .oxd-grid-3 > .oxd-grid-item > .oxd-input-group > :nth-child(2) > .oxd-input').clear().type('Dapzz')
@@ -91,8 +92,8 @@ describe('Personal Details Test', () => {
       cy.url().should('include', '/dashboard');
 
       // Navigate to the MyInfo page
-      cy.get(':nth-child(5) > .oxd-main-menu-item > .oxd-text').click()
-  
+      cy.get('.oxd-sidepanel-body').contains('My Info').click();
+      
       // Clear the first name field and click on the save button
       cy.get('.--name-grouped-field > :nth-child(1) > :nth-child(2) > .oxd-input').clear()
       cy.get(':nth-child(1) > .oxd-form > .oxd-form-actions > .oxd-button').click()

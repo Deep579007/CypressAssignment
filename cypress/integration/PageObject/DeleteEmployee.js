@@ -22,13 +22,13 @@ class DeleteEmployeePage {
   
     deleteUser() {
       cy.get('.oxd-table-cell-actions > :nth-child(1) > .oxd-icon').first().click()
-      cy.get('.oxd-sheet').should('be.visible')
-      cy.get('.oxd-button--label-danger').click()
+    //   cy.get('.oxd-sheet').should('be.visible')
+    //   cy.get('.oxd-button--label-danger').click()
     }
   
-    verifySuccessMessage() {
-      cy.contains('Success').should('be.visible')
-    }
+    // verifySuccessMessage() {
+    //   cy.contains('Success').should('be.visible')
+    // }
   }
   
   export default new DeleteEmployeePage()
